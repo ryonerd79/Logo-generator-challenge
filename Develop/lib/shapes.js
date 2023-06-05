@@ -22,7 +22,11 @@ class square {
         this.shapeColor = shapeColor;
     }
     render() {
-
+       return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        
+       <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+        
+       </svg>`
     }
 }
 
@@ -33,7 +37,9 @@ class triangle {
         this.shapeColor = shapeColor;
     }
     render() {
-        
+        return `<svg height="210" width="500">
+        <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
+      </svg>` 
     }
 }
 

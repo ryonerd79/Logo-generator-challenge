@@ -39,5 +39,10 @@ inquirer.prompt(questions)
     if (data.shape === 'circle') {
         shape = new circle(data.text, data.color, data.shapeColor)
     }
-    
+    if (data.shape === 'circle') {
+        shape = new square(data.text, data.color, data.shapeColor)
+    }
+    if (data.shape === 'circle') {
+        shape = new triangle(data.text, data.color, data.shapeColor)
+    }
 })
