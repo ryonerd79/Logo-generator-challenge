@@ -20,7 +20,10 @@ class square {
         this.text = text;
         this.color = color;
         this.shapeColor = shapeColor;
-    } 
+    }
+    render() {
+
+    }
 }
 
 class triangle {
@@ -28,6 +31,9 @@ class triangle {
         this.text = text;
         this.color = color;
         this.shapeColor = shapeColor;
+    }
+    render() {
+        
     }
 }
 
