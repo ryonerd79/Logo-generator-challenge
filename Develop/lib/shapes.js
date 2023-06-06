@@ -1,46 +1,42 @@
-class circle {
-    constructor(text, color, shapeColor) {
-        this.text = text;
-        this.color = color;
-        this.shapeColor = shapeColor;
+class shape {
+    constructor() {
+        this.color = ''
     }
-    render() {
-      return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    setColor(color) {
+        this.color = color
+    }
+}
+class circle extends shape {
 
-      <circle cx="150" cy="100" r="80" fill="${this.shapeColor}" />
     
-      <text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.color}">${this.text}</text>
+    render() {
+        return `
+
+      <circle cx="150" cy="100" r="80" fill="${this.color}" />
+     
     
-    </svg>`  
+    `
     }
 }
 
-class square {
-    constructor(text, color, shapeColor) {
-        this.text = text;
-        this.color = color;
-        this.shapeColor = shapeColor;
-    }
+class square extends shape {
+    
     render() {
-       return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        return `
         
-       <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+       <rect x="10" y="10" width="30" height="30" stroke="black" fill="${this.color}" stroke-width="5"/>
         
-       </svg>`
+       `
     }
 }
 
-class triangle {
-    constructor(text, color, shapeColor) {
-        this.text = text;
-        this.color = color;
-        this.shapeColor = shapeColor;
-    }
+class triangle extends shape {
+    
     render() {
-        return `<svg height="210" width="500">
+        return `
         <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
-      </svg>` 
+      `
     }
 }
 
-module.exports = {circle, square, triangle}       
+module.exports = { circle, square, triangle }       
