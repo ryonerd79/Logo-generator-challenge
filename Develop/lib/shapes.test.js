@@ -1,4 +1,4 @@
-const{circle, square, triangle}  = require('./shapes.js');
+const{circle, square, triangle}  = require('./shapes.test.js');
 
 describe( {circle}, () => {
   test('Creates a blue circle', () => {
