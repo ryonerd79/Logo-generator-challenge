@@ -15,21 +15,39 @@ const questions = [
     },
 
     {
-        type: 'input',
+        type: 'list',
         name: 'shapeColor',
-        message: 'What color do you want for the shape?'
+        message: 'What color do you want for the shape?',
+        choices: [
+            'blue',
+            'green',
+            'maroon',
+            'red',
+        ]
     },
 
     {
-        type: 'input',
+        type: 'list',
         name: 'text',
-        message: 'What text do you want for your shape'
+        message: 'What text do you want for your shape',
+        choices: [
+            'SVG',
+            'Yama Cars',
+            'Naka Motors',
+            'Waka Guitars'
+        ]
     },
 
     {
-        type: 'input',
+        type: 'list',
         name: 'textColor',
-        message: 'What color do you want for your text?'
+        message: 'What color do you want for your text?',
+        hoices: [
+            'blue',
+            'black',
+            'green',
+            'white'
+        ]
     }
 ]
 

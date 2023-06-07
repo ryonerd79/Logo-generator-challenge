@@ -1,9 +1,9 @@
 class shape {
     constructor() {
-        this.color = ''
+        this.shapeColor = ''
     }
-    setColor(color) {
-        this.color = color
+    setShapeColor(shapeColor) {
+        this.shapeColor = shapeColor
     }
 }
 class circle extends shape {
@@ -12,7 +12,8 @@ class circle extends shape {
     render() {
         return `
 
-      <circle cx="150" cy="100" r="80" fill="${this.color}" />
+      <circle cx="150" cy="100" r="80" fill="${this.shapeColor}" />
+      <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
      
     
     `
@@ -24,7 +25,8 @@ class square extends shape {
     render() {
         return `
         
-       <rect x="10" y="10" width="30" height="30" stroke="black" fill="${this.color}" stroke-width="5"/>
+       <rect x="10" y="10" width="30" height="30" stroke="black" fill="${this.shapeColor}" stroke-width="5"/>
+       <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
         
        `
     }
@@ -34,7 +36,8 @@ class triangle extends shape {
     
     render() {
         return `
-        <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
+        <polygon points="200,10 250,190 160,210" style="fill:${this.shapeColor};stroke:purple;stroke-width:1" />
+        <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
       `
     }
 }
