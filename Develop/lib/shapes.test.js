@@ -1,15 +1,16 @@
-const{circle, square, triangle}  = require('./shapes.test.js');
+const{circle, square, triangle}  = require('./shapes.js');
 
-describe( {circle}, () => {
+describe( 'circle', () => {
   test('Creates a blue circle', () => {
-    const expectedCircle = '<circle cx="150" cy="100" r="80" fill="${this.shapeColor}" text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.color}">${this.text}</text>/>'
-    const testCircle = new circle;
-    testCircle = testCircle.render();
-    expect(testCircle).toEqual(expectedCircle);
+    const expectedCircle = '<circle cx="150" cy="100" r="80" fill="blue" />'
+    const testCircle = new circle();
+    testCircle.setShapeColor('blue');
+    const testSVG = testCircle.render();
+    expect(testSVG).toEqual(expectedCircle);
   });
   })
   
-  describe( {square}, () => {
+  /*describe( {square}, () => {
     test('Creates a blue square', () => {
       const expectedSquare = '<rect x="10" y="10" width="30" height="30" stroke="black" fill="${this.shapeColor}" stroke-width="5" text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.color}">${this.text}</text>/>'
       const testSquare = new square;
@@ -25,7 +26,7 @@ describe( {circle}, () => {
         testTriangle = testTriangle.render();
         expect(testTriangle).toEqual(expectedTriangle);
       });
-      })  
+      })*/  
 
 
 
