@@ -13,7 +13,7 @@ class circle extends shape {
         return `
 
       <circle cx="150" cy="100" r="80" fill="${this.shapeColor}" />
-      <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
+      <text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.color}">SVG</text>
      
     
     `
@@ -26,7 +26,7 @@ class square extends shape {
         return `
         
        <rect x="10" y="10" width="30" height="30" stroke="black" fill="${this.shapeColor}" stroke-width="5"/>
-       <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
+       <text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.color}">SVG</text>
         
        `
     }
@@ -37,7 +37,7 @@ class triangle extends shape {
     render() {
         return `
         <polygon points="200,10 250,190 160,210" style="fill:${this.shapeColor};stroke:purple;stroke-width:1" />
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
+        <text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.color}">SVG</text>
       `
     }
 }
