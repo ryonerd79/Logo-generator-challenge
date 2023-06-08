@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
-const fs = require('fs')
+const {writeFile} = require('fs/promises')
 const {circle, square, triangle} = require("./lib/shapes.js");
-
+const svg = require("./lib/svg.js")
 const questions = [
     {
         type: 'list',
@@ -42,7 +42,7 @@ const questions = [
         type: 'list',
         name: 'textColor',
         message: 'What color do you want for your text?',
-        hoices: [
+        choices: [
             'blue',
             'black',
             'green',
@@ -55,12 +55,17 @@ inquirer.prompt(questions)
 .then((data) => {
     let shape
     if (data.shape === 'circle') {
-        shape = new circle(data.text, data.color, data.shapeColor)
+        shape = new circle()
     }
-    if (data.shape === 'circle') {
-        shape = new square(data.text, data.color, data.shapeColor)
+    if (data.shape === 'square') {
+        shape = new square()
     }
-    if (data.shape === 'circle') {
-        shape = new triangle(data.text, data.color, data.shapeColor)
+    if (data.shape === 'triangle') {
+        shape = new triangle()
     }
+    shape.setShapeColor(data.shapeColor)
+    const svgShape = new svg()
+    svgShape.logoText(data.text, data.textColor)
+    svgShape.logoShape(data.shape)
+return writeFile('logo.svg', svgShape.render())
 })

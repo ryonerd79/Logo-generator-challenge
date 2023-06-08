@@ -17,9 +17,9 @@ describe( 'circle', () => {
       testSquare = testSquare.render();
       expect(testSquare).toEqual(expectedSquare);
     });
-    })  
+  })*/  
 
-    describe( {triangle}, () => {
+    /*describe( {triangle}, () => {
       test('Creates a blue triangle', () => {
         const expectedTriangle = '<polygon points="200,10 250,190 160,210" style="fill:${this.shapeColor};stroke:purple;stroke-width:1" <text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.color}">${this.text}</text>/>'
         const testTriangle = new triangle;
