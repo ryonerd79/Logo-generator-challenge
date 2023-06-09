@@ -10,23 +10,7 @@ describe( 'circle', () => {
   });
   })
   
-  /*describe( {square}, () => {
-    test('Creates a blue square', () => {
-      const expectedSquare = '<rect x="10" y="10" width="30" height="30" stroke="black" fill="${this.shapeColor}" stroke-width="5" text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.color}">${this.text}</text>/>'
-      const testSquare = new square;
-      testSquare = testSquare.render();
-      expect(testSquare).toEqual(expectedSquare);
-    });
-  })*/  
-
-    /*describe( {triangle}, () => {
-      test('Creates a blue triangle', () => {
-        const expectedTriangle = '<polygon points="200,10 250,190 160,210" style="fill:${this.shapeColor};stroke:purple;stroke-width:1" <text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.color}">${this.text}</text>/>'
-        const testTriangle = new triangle;
-        testTriangle = testTriangle.render();
-        expect(testTriangle).toEqual(expectedTriangle);
-      });
-      })*/  
+  
 
 
 

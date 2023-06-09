@@ -19,7 +19,7 @@ class square extends shape {
     render() {
         return `
         
-       <rect x="50" y="25" width="140" height="700" stroke="black" fill="${this.shapeColor}" stroke-width="5"/>
+       <rect x="78" y="30" width="140" height="678" stroke="black" fill="${this.shapeColor}" stroke-width="5"/>
        
         
        `
