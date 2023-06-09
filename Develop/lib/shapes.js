@@ -10,7 +10,7 @@ class circle extends shape {
 
     
     render() {
-        return `<circle cx="150" cy="100" r="80" fill="${this.shapeColor}" />`
+        return `<circle cx="150" cy="115" r="80" fill="${this.shapeColor}" />`
     }
 }
 
@@ -30,7 +30,7 @@ class triangle extends shape {
     
     render() {
         return `
-        <polygon points="150,10 -1,200 320,230" "fill:${this.shapeColor} style="fill:purple;stroke:purple;stroke-width:1/>
+        <polygon points="150,10 -1,200 320,230" fill="${this.shapeColor}"/>
         
       `
     }
